@@ -19,43 +19,48 @@ mixin article( previewUrl, articleUrl, title, description, date, author )
 		.right
 			mixin bt( "READ", articleUrl )	
 
+include ../includes/weekly_bar
+
 #main
-	include ../includes/weekly_bar
-	
 	section#home
 		.top
 			#makioandfloz
 				a#logo(href="/")
 					h1
-						| Makio
-						img(src="img/home_title_and.png", width="80", height="65")
-						| Floz
+						img(src="img/global/logo.png", width="255", height="50", alt="Makio&Floz - Creative Developers")
 				mixin bt( "ABOUT", "/about" )
 			#diaporama
+				.shadow
 				- var items = []
 				- items.push( { imgUrl: "img/diaporama/project_01.jpg", articleUrl: "#", title: "PERFS ON IPAD", date: "June 2009", author: "Makio" } )
 				- items.push( { imgUrl: "img/diaporama/project_01.jpg", articleUrl: "#", title: "PERFS ON IPAD 2", date: "Decembre 2009", author: "Floz" } )
 				- items.push( { imgUrl: "img/diaporama/project_01.jpg", articleUrl: "#", title: "PERFS ON IPAD 3", date: "January 2009", author: "Makio" } )
 				- items.push( { imgUrl: "img/diaporama/project_01.jpg", articleUrl: "#", title: "PERFS ON IPAD 4", date: "June 2009", author: "Floz" } )
-				ul
+				ul#slides
 					- for item in items
 						li
 							a(href=item.articleUrl)
 								img(src=item.imgUrl, width="500", height="200")
-								.content
+							.content
+								.left
 									.title= item.title
-									.date= item.date
-									.author= item.author
+								.right
+									.date
+										span Date: 
+										span= item.date
+									.author
+										span Author: 
+										span= item.author
 				nav
 					ul
 						-for item, i in items
-							li
+							li.activated
 								a(href=i)
 		.bot
 			ul#articles
 				li
 					- var article = {}
-					- article.previewUrl = "img/exemple_1/thumb.jpg"
+					- article.previewUrl = "img/articles/exemple_1/thumb.jpg"
 					- article.articleUrl = "/exemple_1"
 					- article.title = "PERFS ON IPAD"
 					- article.description = "I’m a huge fan of Erick Natzke’s work. I’ve alwas wanted to try to replicated his workflow to get inspired..."
@@ -63,7 +68,7 @@ mixin article( previewUrl, articleUrl, title, description, date, author )
 					- article.author = "Makio"
 					mixin article( article.previewUrl, article.articleUrl, article.title, article.description, article.date, article.author )
 				li
-					- article.previewUrl = "img/exemple_2/thumb.jpg"
+					- article.previewUrl = "img/articles/exemple_2/thumb.jpg"
 					- article.articleUrl = "/exemple_1"
 					- article.title = "PERFS ON IPAD 1"
 					- article.description = "I’m a huge fan of Erick Natzke’s work. I’ve alwas wanted to try to replicated his workflow to get inspired..."
@@ -71,7 +76,7 @@ mixin article( previewUrl, articleUrl, title, description, date, author )
 					- article.author = "Floz"
 					mixin article( article.previewUrl, article.articleUrl, article.title, article.description, article.date, article.author )
 				li
-					- article.previewUrl = "img/exemple_1/thumb.jpg"
+					- article.previewUrl = "img/articles/exemple_1/thumb.jpg"
 					- article.articleUrl = "/exemple_1"
 					- article.title = "PERFS ON IPAD 2"
 					- article.description = "I’m a huge fan of Erick Natzke’s work. I’ve alwas wanted to try to replicated his workflow to get inspired..."
@@ -79,7 +84,7 @@ mixin article( previewUrl, articleUrl, title, description, date, author )
 					- article.author = "Makio"
 					mixin article( article.previewUrl, article.articleUrl, article.title, article.description, article.date, article.author )
 				li
-					- article.previewUrl = "img/exemple_2/thumb.jpg"
+					- article.previewUrl = "img/articles/exemple_2/thumb.jpg"
 					- article.articleUrl = "/exemple_1"
 					- article.title = "PERFS ON IPAD 3"
 					- article.description = "I’m a huge fan of Erick Natzke’s work. I’ve alwas wanted to try to replicated his workflow to get inspired..."
@@ -87,6 +92,6 @@ mixin article( previewUrl, articleUrl, title, description, date, author )
 					- article.author = "Floz"
 					mixin article( article.previewUrl, article.articleUrl, article.title, article.description, article.date, article.author )
 
-	include ../includes/footer
+include ../includes/footer
 
 include ../includes/scripts

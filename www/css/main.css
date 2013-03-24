@@ -3,13 +3,203 @@ body {
 }
 #main {
   margin: auto;
-  width: 780px;
+  width: 760px;
 }
 .bt {
-  background-color: #f0f;
+  font: normal 10px "Montserrat";
+  background-color: #323232;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 12px 10px 10px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.bt .icon {
+  display: inline-block;
+  background: transparent url("../img/global/bt_arrow_right.png");
+  width: 9px;
+  height: 5px;
+  margin-right: 10px;
 }
 div .fb_reset {
   display: inline;
+}
+.clear {
+  clear: both;
+}
+#weekly_bar .title {
+  width: 100%;
+  font: normal 12px/30px 'Montserrat';
+  background-color: #323232;
+  color: #fff;
+  padding-left: 20px;
+}
+#weekly_bar ul {
+  margin-top: 1px;
+  height: 70px;
+  overflow: hidden;
+}
+#weekly_bar ul li {
+  float: left;
+}
+#makioandfloz {
+  display: block;
+  width: 255px;
+  margin: 40px auto;
+}
+#makioandfloz .bt {
+  margin-top: 10px;
+  float: right;
+}
+#logo {
+  overflow: hidden;
+  border-bottom: 1px solid #323232;
+  color: #323232;
+  text-decoration: none;
+  display: block;
+  padding-bottom: 10px;
+  font: normal 52px "Squada One";
+}
+#diaporama {
+  position: relative;
+  margin: 50px auto;
+  width: 504px;
+  height: 240px;
+  font: normal 10px "Montserrat";
+}
+#diaporama .shadow {
+  position: absolute;
+  background: transparent url("../img/global/home_diaporama_shadow.jpg");
+  width: 646px;
+  height: 81px;
+  bottom: -5px;
+  left: -75px;
+}
+#diaporama #slides {
+  position: relative;
+  height: 242px;
+  background-color: #fff;
+}
+#diaporama #slides li {
+  position: absolute;
+  height: 200px;
+  top: 2px;
+  left: 2px;
+}
+#diaporama a {
+  text-decoration: none;
+  color: #323232;
+  display: block;
+}
+#diaporama .content {
+  background-color: #fff;
+  overflow: hidden;
+  padding: 7px 20px;
+}
+#diaporama .left,
+#diaporama .right {
+  float: left;
+}
+#diaporama .title {
+  font-weight: bold;
+  margin-top: 7px;
+}
+#diaporama .right {
+  float: right;
+}
+#diaporama nav {
+  text-align: center;
+  margin-top: 20px;
+}
+#diaporama nav ul {
+  display: inline-block;
+  overflow: hidden;
+}
+#diaporama nav li {
+  float: left;
+  margin-right: 10px;
+}
+#diaporama nav li.activated a {
+  background-color: 323232;
+}
+#diaporama nav a {
+  width: 6px;
+  height: 6px;
+  border-radius: 4px;
+  background-color: #e0e0e0;
+}
+#articles {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+#articles li {
+  float: left;
+  width: 240px;
+  height: 238px;
+  background-color: #fff;
+  font: normal 10px "Montserrat";
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+#articles li:nth-child(3) {
+  margin-right: 0;
+}
+#articles li:nth-child(6) {
+  margin-right: 0;
+}
+#articles li:nth-child(9) {
+  margin-right: 0;
+}
+#articles li:nth-child(12) {
+  margin-right: 0;
+}
+#articles li:nth-child(15) {
+  margin-right: 0;
+}
+#articles li:nth-child(18) {
+  margin-right: 0;
+}
+#articles li:nth-child(21) {
+  margin-right: 0;
+}
+#articles li:nth-child(24) {
+  margin-right: 0;
+}
+#articles li:nth-child(27) {
+  margin-right: 0;
+}
+#articles li:nth-child(30) {
+  margin-right: 0;
+}
+#articles li:nth-child(33) {
+  margin-right: 0;
+}
+#articles li:nth-child(36) {
+  margin-right: 0;
+}
+#articles .content {
+  padding: 15px 20px 15px 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+#articles .title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+#articles .infos {
+  padding: 13px 10px 10px 20px;
+  overflow: hidden;
+}
+#articles .left {
+  float: left;
+}
+#articles .right {
+  float: right;
+  border-left: 1px solid #e0e0e0;
+  padding-left: 10px;
+  margin-top: 5px;
 }
 article {
   width: 780px;
@@ -184,4 +374,120 @@ article content img.big {
     text-align: center;
     height: auto;
   }
+}
+footer {
+  position: relative;
+  border-top: 5px solid #323232;
+  margin-top: 40px;
+  height: 250px;
+  font: normal 10px "Montserrat";
+}
+footer .content {
+  position: relative;
+  width: 880px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+footer a {
+  text-decoration: none;
+  color: #000;
+}
+footer .title {
+  font: normal 24px "Squada One";
+  margin-bottom: 20px;
+  margin-top: 15px;
+}
+footer .twitter,
+footer .mail {
+  display: block;
+}
+footer .icon,
+footer .name {
+  display: inline-block;
+}
+footer .icon {
+  margin-right: 5px;
+}
+footer .twitter {
+  width: 100%;
+}
+footer .twitter .icon {
+  background: transparent url("../img/global/footer_icon_twitter.png");
+  width: 10px;
+  height: 9px;
+}
+footer .mail {
+  width: 100%;
+}
+footer .mail .icon {
+  background: transparent url("../img/global/bt_arrow_right.png");
+  width: 9px;
+  height: 5px;
+}
+#authors {
+  overflow: hidden;
+  float: left;
+  padding-right: 20px;
+  height: 100%;
+  border-right: 1px solid #e0e0e0;
+}
+#authors .bot {
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#authors .citation {
+  margin-top: 20px;
+  padding-bottom: 20px;
+  color: #a4a3a3;
+  border-bottom: 1px solid #e0e0e0;
+}
+#makio,
+#floz {
+  float: left;
+  width: 200px;
+}
+#makio {
+  margin-right: 20px;
+}
+#latest_article {
+  float: left;
+  width: 400px;
+  position: relative;
+  overflow: hidden;
+  padding-left: 20px;
+}
+#latest_article .title {
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 20px;
+}
+#latest_article>.left,
+#latest_article>.right {
+  float: left;
+}
+#latest_article>.left {
+  width: 200px;
+}
+#latest_article>.right {
+  width: 181px;
+  height: 166px;
+  margin-top: 61px;
+  margin-left: 19px;
+}
+#latest_article .description {
+  height: 115px;
+}
+#latest_article .infos {
+  height: 30px;
+}
+#latest_article .infos .left {
+  float: left;
+  width: 110px;
+}
+#latest_article .infos .right {
+  float: right;
+  border-left: 1px solid #e0e0e0;
+  padding-left: 10px;
+  margin-top: 7px;
 }
