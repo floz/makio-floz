@@ -13,7 +13,7 @@ div .fb_reset {
 }
 article {
   width: 780px;
-  margin: 10px 0;
+  margin: 10px auto;
   overflow: hidden;
 }
 article .preview {
@@ -85,7 +85,7 @@ article .title h2 {
 article .share {
   text-align: left;
   height: 40px;
-  background: url("../img/global/article_share_background.jpg") no-repeat top left;
+  background: url("../img/global/article_share_background.jpg") no-repeat top right;
 }
 article .share .box {
   float: right;
@@ -142,6 +142,46 @@ article content img {
   border: 3px solid #f7f7f7;
 }
 article content img.big {
+  max-width: 100%;
+  height: auto;
   border-left-width: 0;
   border-right-width: 0;
+}
+@media (max-width: 780px) {
+  article {
+    background: #fff;
+    width: 100%;
+  }
+  article .preview {
+    width: 100%;
+    margin: 0;
+  }
+  article .title .corner {
+    width: 240px;
+    background: transparent;
+  }
+  article content {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+@media (max-width: 480px) {
+  article .title .corner {
+    width: 100%;
+    height: auto;
+    float: none;
+  }
+  article .title .corner img {
+    width: 100%;
+    height: auto;
+  }
+  article .title h2 {
+    display: block;
+    overflow: hidden;
+    width: 80%;
+    margin: auto;
+    padding: 20px 0 0;
+    text-align: center;
+    height: auto;
+  }
 }
