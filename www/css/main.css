@@ -321,10 +321,10 @@ article content {
 article content p {
   padding: 0 40px 20px 40px;
   color: #323232;
-  font-size: 12px;
+  font-size: 13px;
   font-family: 'Montserrat', sans-serif;
   font-weight: normal;
-  line-height: 14px;
+  line-height: 1.5em;
   text-align: left;
 }
 article content img {
@@ -373,6 +373,26 @@ article content img.big {
     padding: 20px 0 0;
     text-align: center;
     height: auto;
+  }
+}
+@media (max-width: 320px) {
+  article {
+    width: 320px;
+  }
+  article .preview {
+    width: 320px;
+  }
+  article .title .corner {
+    width: 320px;
+  }
+  article .title .corner img {
+    width: 320px;
+  }
+  article .title h2 {
+    width: 320px;
+  }
+  article content {
+    width: 320px;
   }
 }
 footer {
