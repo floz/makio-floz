@@ -1,5 +1,17 @@
 include ../../includes/head
 
+include ../../mixins/mixins
+
+include ../../includes/weekly_bar
+
+section#home
+	.top
+		#makioandfloz
+			a#logo(href="/")
+				h1
+					img(src="img/global/logo.png", width="255", height="50", alt="Makio&Floz - Creative Developers")
+			mixin bt( "ABOUT", "/about" )
+			
 article
 	
 	.preview
@@ -51,4 +63,6 @@ article
 		img.big( src='./img/articles/exemple/001.jpg', alt='bouboup')
 
 				
+include ../../includes/footer
+
 include ../../includes/scripts
