@@ -1,26 +1,31 @@
 body
-	background #f7f7f7
+	// overflow-x  hidden
+	width		100%
+	background  #f7f7f7
 
 #main
 	// background-color #ff00ff
-	margin auto
-	width 760px
+	margin 		auto
+	width		880px
 
 .bt
-	font normal 10px "Montserrat"
-	background-color #323232
-	color #fff
-	text-decoration none
+	font normal 		10px "Montserrat"
+	background-color 	#323232
+	color 				#fff
+	
+	text-decoration 	none
+	
 	padding 10px 12px 10px 10px
-	border-radius 5px
-	-webkit-border-radius 5px
-	-moz-border-radius 5px
-	-o-border-radius 5px
+
+	border-radius 			5px
+	-webkit-border-radius 	5px
+	-moz-border-radius 		5px
+	-o-border-radius 		5px
 	.icon
 		display inline-block
 		background transparent url( "../img/global/bt_arrow_right.png" )
-		width 9px
-		height 5px
+		width 	9px
+		height 	5px
 		margin-right 10px
 
 // facebook fix
@@ -31,3 +36,10 @@ div
 .clear
 	clear both
 
+
+
+// --------------------------------------------------------------------------- RESPONSIVE DESIGN
+
+@media (max-width: 880px)
+	#main
+		width 100%

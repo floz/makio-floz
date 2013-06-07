@@ -3,6 +3,7 @@
 	width 255px
 	margin 40px auto
 	.bt
+		display none
 		margin-top 10px
 		float right
 
@@ -71,8 +72,8 @@
 			background-color #e0e0e0
 
 #articles
-	position relative
-	width 100%
+	width 800px
+	margin auto
 	overflow hidden
 	li
 		float left
@@ -81,12 +82,9 @@
 		background-color #fff
 		font normal 10px "Montserrat"
 		margin-bottom 20px
-		margin-right 20px
+		margin-left 20px
 
-	for idx in 0..36
-		if( idx % 3 == 2 )
-			li:nth-child({idx+1})
-				margin-right 0
+
 	.content
 		padding 15px 20px 15px 20px
 		border-bottom 1px solid #e0e0e0
@@ -103,3 +101,45 @@
 		border-left 1px solid #e0e0e0
 		padding-left 10px
 		margin-top 5px
+
+
+// --------------------------------------------------------------------------- RESPONSIVE DESIGN
+@media (max-width: 800px)
+	// #diaporama
+	// 	display none
+
+	#articles
+		width 100%
+		li
+			float left
+			width 47%
+			background-color #fff
+			height auto
+			margin-right 0
+			margin-left 2%
+			margin-bottom 20px
+			a
+				img
+					width 100%
+					margin auto
+					height auto
+
+		.infos
+			display none
+	
+@media (max-width: 480px)
+	#diaporama
+		display none
+
+	#articles
+		li
+			display block
+			float none
+			width 92%
+			background-color #fff
+			height auto
+			margin auto
+			margin-bottom 20px
+	#makioandfloz
+		.bt
+			display none

@@ -13,9 +13,9 @@ footer
 		text-decoration none
 		color #000
 	.title
-		font normal 24px "Squada One"
-		margin-bottom 20px
-		margin-top 15px
+		font normal 	24px "Squada One"
+		margin-bottom 	20px
+		margin-top 		15px
 	.twitter, .mail
 		display block
 	.icon, .name
@@ -26,31 +26,32 @@ footer
 		width 100%
 		.icon
 			background transparent url( "../img/global/footer_icon_twitter.png" )
-			width 10px
-			height 9px
+			width 	10px
+			height 	9px
 	.mail
 		width 100%
 		.icon
 			background transparent url( "../img/global/bt_arrow_right.png" )
-			width 9px
-			height 5px
+			width 	9px
+			height 	5px
 
 #authors
-	overflow hidden
-	float left
-	padding-right 20px
-	height 100%
-	border-right 1px solid #e0e0e0
+	overflow 		hidden
+	float 			left
+	padding-right	20px
+	height 			100%
+	border-right 	1px solid #e0e0e0
 	.bot
-		position relative
-		width 100%
-		margin-top 10px
-		margin-bottom 10px
+		position 		relative
+		width 			100%
+		margin-top 		10px
+		margin-bottom 	10px
 	.citation
-		margin-top 20px
-		padding-bottom 20px
-		color #a4a3a3
-		border-bottom 1px solid #e0e0e0
+		text-transform uppercase
+		margin-top 		20px
+		padding-bottom 	20px
+		color 			#a4a3a3
+		border-bottom 	1px solid #e0e0e0
 
 #makio, #floz
 	float left
@@ -89,3 +90,33 @@ footer
 			border-left 1px solid #e0e0e0
 			padding-left 10px
 			margin-top 7px
+
+
+
+// --------------------------------------------------------------------------- RESPONSIVE DESIGN
+
+@media (max-width: 880px)
+	footer
+		.content
+			width 100%
+		height 280px
+
+	#authors
+		float none
+		width 100%
+		
+		img
+			width 100%
+			height auto
+
+
+	#makio, #floz
+		float left
+		width 46%
+
+	#makio
+		margin-right 3%
+		margin-left 3%
+
+	#latest_article
+		display none
