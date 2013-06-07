@@ -340,7 +340,7 @@ article content {
 article content p {
   padding: 0 40px 20px 40px;
   color: #323232;
-  font-size: 13px;
+  font-size: 12px;
   font-family: 'Montserrat', sans-serif;
   font-weight: normal;
   line-height: 1.5em;
@@ -355,6 +355,9 @@ article content img.big {
   height: auto;
   border-left-width: 0;
   border-right-width: 0;
+}
+article content pre[class*="language-"] {
+  font-size: 12px;
 }
 @media (max-width: 780px) {
   article {
@@ -372,6 +375,13 @@ article content img.big {
   article content {
     width: 100%;
     margin-left: 0;
+  }
+  article content p {
+    padding: 0 10px 20px 10px;
+  }
+  article content pre[class*="language-"] {
+    margin-left: 10px;
+    margin-right: 10px;
   }
 }
 @media (max-width: 480px) {
