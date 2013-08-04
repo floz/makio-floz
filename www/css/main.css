@@ -36,6 +36,7 @@ div .fb_reset {
   }
 }
 #weekly_bar .title {
+  width: 100%;
   font: normal 12px/30px 'Montserrat';
   background-color: #323232;
   color: #fff;
@@ -43,16 +44,15 @@ div .fb_reset {
 }
 #weekly_bar ul {
   margin-top: 1px;
+  width: 100%;
   height: 70px;
   overflow: hidden;
 }
 #weekly_bar ul li {
-  float: left;
-  width: 25%;
-}
-#weekly_bar ul li img {
-  width: 100%;
-  height: auto;
+  display: none;
+  position: absolute;
+  overflow: hidden;
+  height: 70px;
 }
 @media (max-width: 800px) {
   #weekly_bar ul {

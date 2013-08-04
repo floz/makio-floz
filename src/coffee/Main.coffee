@@ -4,4 +4,4 @@ $( window ).ready ->
 class Main
 
 	constructor: ->
-		console.log "Hello Main"
+		new WeeklyBar()
