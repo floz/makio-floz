@@ -54,6 +54,9 @@ div .fb_reset {
   overflow: hidden;
   height: 70px;
 }
+#weekly_bar ul img {
+  position: absolute;
+}
 @media (max-width: 800px) {
   #weekly_bar ul {
     display: none;

@@ -28,8 +28,8 @@ class WeeklyBar
 			if $img.width() < wLi
 				$img.css "width", wLi + "px"
 			$img.css
-				"position": "absolute"
 				"left": wLi - $img.width() >> 1
+				"top": 70 - $img.height()
 			px += wLi
 
 	_resizeHandler: =>

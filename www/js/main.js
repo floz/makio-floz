@@ -50,8 +50,8 @@ WeeklyBar = (function() {
         $img.css("width", wLi + "px");
       }
       $img.css({
-        "position": "absolute",
-        "left": wLi - $img.width() >> 1
+        "left": wLi - $img.width() >> 1,
+        "top": 70 - $img.height()
       });
       _results.push(px += wLi);
     }
