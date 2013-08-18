@@ -1,0 +1,99 @@
+include ../../includes/head
+
+include ../../mixins/mixins
+
+include ../../includes/weekly_bar
+
+section#home
+    .top
+        #makioandfloz
+            a#logo(href="/")
+                h1
+                    img(src="img/global/logo.png", width="255", height="50", alt="Makio&Floz - Creative Developers")
+            mixin bt( "ABOUT", "/about" )
+            
+article
+    
+    .preview
+        h3 Optimize your Gamejam workflow
+
+        .info
+            .date
+                |Date : 18.09.2013
+            .author
+                |Author : 
+                a(href='http://makiopolis.com', title='More about Makio', target='_blank')
+                    |  Makio
+        .separator
+
+    .title
+        .corner
+            img(src='./img/articles/exemple/thumb.jpg', alt='The killer title !')
+        h2.
+            Optimize your Gamejam workflow 
+
+
+    content
+        p.
+            Hello and welcome everybody!
+        p.
+            In this first article about game creation I will explain how optimize your workflow when you participate to a gamejam with a small team and a very short time to create a fun game.
+        p.
+            I assume your team for the gamejam is compose with one :<br />
+            <img src="img/articles/exemple_1/3people_120818.png" alt ="1 dev / 1 graphist / 1 musician"/>
+            
+        h3.
+            I. Before the gamejam
+        p.
+           <span class="important">Know the skills of each others:</span><br/> 
+            With the team, define what is your current taste and where you think you are strong or weak. For example : 2d / 3d / abstract / illustration / animation / pixel art / parallax / interface etc..
+            <br/> The goal is to know the field where your team is strong, maybe find some ideas, and avoid during the gamejam to start doing something you are not confortable with.
+        p.
+            <span class="important">Select technology and tool :</span> <br />
+            Now, you know your skills and taste you can decide of your technology ( html5 / js / unity3d / haxe / flash / c++ / etc... )
+            Then decide how the assets ( images / animation / 3d model / sound ) should be save and integrate to the code (image format / mp3 quality / spritesheet / etc ..). <br/>
+        p.
+            <span class="important">Prepare your workspace :</span> <br />
+            Create everything you can : Setup your project, import your favorite librairy and plugins, create a dropbox folder to share assets, create the github to save your code, create sample spriteSheet, etc.. and don't forget the most important create your playlist and your food supply :)
+        h3.
+            II. During the gamejam.
+        p.
+            <span class="important">Find the concept :</span> <br />
+            Focus all together on the theme, try to find something original and fun, something you want to play it and think out of border. Dont forget you can't concurence the video game production in 2day but you can create a great demo, very fun and attractive with new ideas inside.
+        p.
+            <span class="important">Create a wireframe :</span> <br />
+            Ok, we have the great idea, we define the unniverse, time to draw some wireframe. This step is important to synchronize the dev, graphist and sound designer and you should not change a lot after. Here, I recommand in general to avoid hightscore idea, long tutorial and reuse a strong concept a lot. Also define priority and hard point ( algorythm, animation, loop music ).
+        p.
+            <span class="important">Create rought :</span> <br />
+            At the start create all wireframe in rought. It's for graphist, dev and musician. It help to made all in place and after musician and graphist can improve the asset wihout any intervention of the developper. Everyone is independent.
+        p.
+            <span class="important">Fine tunning :</span> <br />
+            When your base is complete, it's time to improve the graphism, the logo, better integrate the sound, add particles, code animation, add more sounds, etc... This step depends of how many time do you have but never give up and create the best game you can during the jam! :)
+         h3.
+            III. Typical workflow
+        p.
+            <img src="img/articles/optimize_workflow/workflow.png" alt =""/>
+        p.
+            As you can see in this workflow, I generally use dropbox for the assets. It allow the developer import one time the assets from the dropbox and after when the artists update the ressource in the dropbox, the dev get it automatically. Also artist can made how many update they want and everyone focus on improve his assets. It's especially important at the end, when the developper don't have time to add more design / sound, then the artists can continue to work and adding details. :)
+        p.
+            To package assets, I recommend some tools : <br />
+            * 2D Spritesheet : <a href="http://www.codeandweb.com/texturepacker">Texture Packer</a> (windows & mac), the best<br />
+            * Fonts : <a href="http://www.71squared.com/en/glyphdesigner">Glyph Designer</a> (mac only) or <a href="http://www.bmglyph.com/">BMGlyph</a> (mac only) witch is good too and cheaper.<br />
+            * Particles : <a href="http://www.71squared.com/en/particledesigner">Particle Designer</a> (mac only), the best.<br />
+            They are not free but around 15$ each and really good for your developpment.
+        p.
+            <span class="important">Thats all for this time !</span><br />Have fun with your futur project.<br />
+
+        .share
+            .box
+                .twitter
+                    a.twitter-share-button(href='https://twitter.com/share', data-via='makio64', data-lang='fr', data-related='floz', data-hashtags='makioandfloz') Tweeter
+                    script.
+                        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+                .separator
+                .facebook
+                    .fb-like(data-send='false', data-layout='button_count', data-width='120', data-show-faces='false')
+                
+include ../../includes/footer
+
+include ../../includes/scripts

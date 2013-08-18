@@ -132,25 +132,32 @@ article
 		width		760px
 		margin		-10px 0 0 20px
 		padding		40px 0
+		color 			#323232
+		font-size 		12px
+		font-family 	'Arial', 'Montserrat', sans-serif
+		font-weight 	normal
+		line-height		18px
+
+		text-align		justify
+
 
 		background 	#FFF
 
-		text-align	center
 
-		p
+		p, ul, h3, h4, h5, h6
 			padding			0 40px 20px 40px
+		
+			.important
+				font-weight	bold
+				color red
 
-			color 			#323232
-			font-size 		12px
-			font-family 	'Montserrat', sans-serif
-			font-weight 	normal
-			line-height		1.5em
-
-			text-align		left
+		h3
+			font-size	1.2em
 
 		img
-			margin 	auto
-			border 	3px solid #f7f7f7
+			margin 	10px auto
+			.border
+				3px solid #f7f7f7
 
 		img.big
 			max-width 			100%
@@ -160,6 +167,11 @@ article
 
 		pre[class*="language-"]
 			font-size 	12px
+
+		a
+			color 		#929292
+			&:hover
+				color 	#D2D2D2
 
 // --------------------------------------------------------------------------- RESPONSIVE DESIGN
 
@@ -178,7 +190,7 @@ article
 			width			100%
 			margin-left 	0
 
-			p
+			p, ul, h3, h4, h5, h6
 				padding			0 10px 20px 10px
 
 			pre[class*="language-"]
