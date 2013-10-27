@@ -85,7 +85,8 @@ module.exports = function ( grunt ) {
                 compile: {
                     options: {
                         data: {
-                            debug: true
+                            debug: true,
+                            pretty: true
                         }
                     },
                     files: jadesToWatch
