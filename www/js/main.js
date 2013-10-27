@@ -5,9 +5,7 @@ $(window).ready(function() {
 });
 
 Main = (function() {
-  function Main() {
-    new WeeklyBar();
-  }
+  function Main() {}
 
   return Main;
 
