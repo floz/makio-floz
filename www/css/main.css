@@ -14,7 +14,7 @@ article .share .box{float:right;width:205px;height:39px;margin-top:1px;padding-l
 article .share .box .separator{float:left;width:1px;height:15px;margin-top:13px;margin-left:5px;margin-right:9px;background:#e0e0e0 url("../img/global/article_liseret.jpg") no-repeat}
 article .share .box .facebook{margin-top:10px;font-size:1px;display:inline-block;float:left;width:90px;overflow:hidden}
 article .share .box .twitter{font-size:1px;margin-top:10px;float:left;width:90px;overflow:hidden}
-article content{display:block;width:760px;margin:-10px 0 0 20px;padding:40px 0;color:#323232;font-size:12px;font-family:'Arial','Montserrat',sans-serif;font-weight:normal;line-height:18px;text-align:justify;background:#fff;}
+article content{display:block;width:760px;margin:-10px 0 0 20px;padding:40px 0 0 0;color:#323232;font-size:12px;font-family:'Arial','Montserrat',sans-serif;font-weight:normal;line-height:18px;text-align:justify;background:#fff;}
 article content p,article content ul,article content h3,article content h4,article content h5,article content h6{padding:0 40px 20px 40px;}
 article content p .important,article content ul .important,article content h3 .important,article content h4 .important,article content h5 .important,article content h6 .important{font-weight:bold;color:#f00}
 article content h3{font-size:1.2em}
@@ -169,7 +169,7 @@ article .share .box{float:right;width:205px;height:39px;margin-top:1px;padding-l
 article .share .box .separator{float:left;width:1px;height:15px;margin-top:13px;margin-left:5px;margin-right:9px;background:#e0e0e0 url("../img/global/article_liseret.jpg") no-repeat}
 article .share .box .facebook{margin-top:10px;font-size:1px;display:inline-block;float:left;width:90px;overflow:hidden}
 article .share .box .twitter{font-size:1px;margin-top:10px;float:left;width:90px;overflow:hidden}
-article content{display:block;width:760px;margin:-10px 0 0 20px;padding:40px 0;color:#323232;font-size:12px;font-family:'Arial','Montserrat',sans-serif;font-weight:normal;line-height:18px;text-align:justify;background:#fff;}
+article content{display:block;width:760px;margin:-10px 0 0 20px;padding:40px 0 0 0;color:#323232;font-size:12px;font-family:'Arial','Montserrat',sans-serif;font-weight:normal;line-height:18px;text-align:justify;background:#fff;}
 article content p,article content ul,article content h3,article content h4,article content h5,article content h6{padding:0 40px 20px 40px;}
 article content p .important,article content ul .important,article content h3 .important,article content h4 .important,article content h5 .important,article content h6 .important{font-weight:bold;color:#f00}
 article content h3{font-size:1.2em}
