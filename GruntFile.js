@@ -118,8 +118,8 @@ module.exports = function ( grunt ) {
                     },
                     files: [ {
                         expand: true,
-                        cwd: "deploy/img/",
-                        dest: "deploy/img/",
+                        cwd: "www/img/",
+                        dest: "www/img/",
                         src: [ "**/*.{png,jpg}"]
                     }]
                 }
