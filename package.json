@@ -1,0 +1,22 @@
+{
+  "name": "template",
+  "author": "Florian Zumbrunn <florian.zumbrunn@gmail.com>",
+  "version": "0.0.1",
+  "private": true,
+  "engines": {
+    "node": "0.8.x",
+    "npm": "1.2.x"
+  },
+  "dependencies": {
+    "coffee-script": "*"
+  },
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-contrib-jade": "*",
+    "grunt-contrib-coffee": "*",
+    "grunt-contrib-stylus": "*",
+    "grunt-contrib-imagemin": "~0.3.0",
+    "grunt-contrib-uglify": "*"
+  }
+}
