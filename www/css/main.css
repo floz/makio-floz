@@ -102,7 +102,7 @@ div .fb_reset{display:inline}
 #articles li{float:left;width:240px;height:238px;background-color:#fff;font:normal 10px "Montserrat";margin-bottom:20px;margin-left:20px}
 #articles .content{padding:15px 20px 15px 20px;border-bottom:1px solid #e0e0e0}
 #articles .title{font-weight:bold;margin-bottom:5px}
-#articles .infos{padding:13px 10px 10px 20px;overflow:hidden}
+#articles .infos{padding:13px 10px 10px 20px;overflow:hidden;width:84%}
 #articles .left{float:left}
 #articles .right{float:right;border-left:1px solid #e0e0e0;padding-left:10px;margin-top:5px}
 @media (max-width: 800px){#articles{width:100%;}
@@ -143,7 +143,7 @@ div .fb_reset{display:inline}
 #articles li{float:left;width:240px;height:238px;background-color:#fff;font:normal 10px "Montserrat";margin-bottom:20px;margin-left:20px}
 #articles .content{padding:15px 20px 15px 20px;border-bottom:1px solid #e0e0e0}
 #articles .title{font-weight:bold;margin-bottom:5px}
-#articles .infos{padding:13px 10px 10px 20px;overflow:hidden}
+#articles .infos{padding:13px 10px 10px 20px;overflow:hidden;width:84%}
 #articles .left{float:left}
 #articles .right{float:right;border-left:1px solid #e0e0e0;padding-left:10px;margin-top:5px}
 @media (max-width: 800px){#articles{width:100%;}
