@@ -4,4 +4,3 @@ $( window ).ready ->
 class Main
 
 	constructor: ->
-		new WeeklyBar()

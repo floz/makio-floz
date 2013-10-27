@@ -76,7 +76,7 @@ module.exports = function ( grunt ) {
                     tasks: [ "stylus" ]
                 },
                 jade: {
-                    files: [ "src/jade/pages/**/*.jade" ],
+                    files: [ "src/jade/**/*.jade" ],
                     tasks: [ "jade:compile" ]
                 }
             },

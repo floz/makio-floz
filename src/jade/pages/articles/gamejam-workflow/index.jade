@@ -1,15 +1,15 @@
-include ../../includes/head
+include ../../../includes/head
 
-include ../../mixins/mixins
+include ../../../mixins/mixins
 
-include ../../includes/weekly_bar
+include ../../../includes/weekly_bar
 
 section#home
     .top
         #makioandfloz
             a#logo(href="/")
                 h1
-                    img(src="img/global/logo.png", width="255", height="50", alt="Makio&Floz - Creative Developers")
+                    img(src="/img/global/logo.png", width="255", height="50", alt="Makio&Floz - Creative Developers")
             mixin bt( "ABOUT", "/about" )
             
 article
@@ -28,7 +28,7 @@ article
 
     .title
         .corner
-            img(src='./img/articles/exemple/thumb.jpg', alt='The killer title !')
+            img(src='./img/thumb.jpg', alt='The killer title !')
         h2.
             Optimize your Gamejam workflow 
 
@@ -40,7 +40,7 @@ article
             In this first article about game creation I will explain how optimize your workflow when you participate to a gamejam with a small team and a very short time to create a fun game.
         p.
             I assume your team for the gamejam is compose with one :<br />
-            <img src="img/articles/exemple_1/3people_120818.png" alt ="1 dev / 1 graphist / 1 musician"/>
+            <img src="./img/jobs.png" alt ="1 dev / 1 graphist / 1 musician"/>
             
         h3.
             I. Before the gamejam
@@ -72,7 +72,7 @@ article
          h3.
             III. Typical workflow
         p.
-            <img src="img/articles/optimize_workflow/workflow.png" alt =""/>
+            <img src="img/workflow.png" alt =""/>
         p.
             As you can see in this workflow, I generally use dropbox for the assets. It allow the developer import one time the assets from the dropbox and after when the artists update the ressource in the dropbox, the dev get it automatically. Also artist can made how many update they want and everyone focus on improve his assets. It's especially important at the end, when the developper don't have time to add more design / sound, then the artists can continue to work and adding details. :)
         p.
@@ -94,6 +94,6 @@ article
                 .facebook
                     .fb-like(data-send='false', data-layout='button_count', data-width='120', data-show-faces='false')
                 
-include ../../includes/footer
+include ../../../includes/footer
 
-include ../../includes/scripts
+include ../../../includes/scripts
