@@ -21,7 +21,7 @@ module.exports = function ( grunt ) {
 
   grunt.event.on( "watch", function( action, filepath ) {
     var fileType = getFileType( filepath );
-    if( fileType == "jade" ) {
+    if( fileType == "jade" || fileType == "json" ) {
       jadesToWrite = getFilesToWrite( jadesToWrite, srcJade, deployJade, ".html" );
       getJadeDatas();
       initConfig();
@@ -58,17 +58,18 @@ module.exports = function ( grunt ) {
 
   function getJadeDatas() {
     jadesData = {};
-    jadesData.articles = {};
+    jadesData.articles = [];
 
     grunt.file.recurse( srcJadeData, function( abspath, rootdir, subdir, filename ) {
       var name = filename.split( "." )[ 0 ];
       if( subdir == undefined ) {
         jadesData[ name ] = require( "./" + abspath );
       } else {
-        jadesData.articles[ name ] = require( "./" + abspath );
-        jadesData.articles[ name ].path = filename.split( "." ).shift();
+        jadesData.articles.push( require( "./" + abspath ) );
+        jadesData.articles[ jadesData.articles.length - 1 ].path = filename.split( "." ).shift();
       }
     });
+    jadesData.articles.reverse();
   }
 
   function initConfig() {

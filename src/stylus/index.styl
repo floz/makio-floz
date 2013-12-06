@@ -1,8 +1,9 @@
 html, body
   width 100%
   height width
+  background-color #edf0f4
 
-titleHeight = 300px
+titleHeight = 150px
 
 .title
   background-color #152946
@@ -12,9 +13,51 @@ titleHeight = 300px
 h1
   color #fff
   text-align center
-  font 800 76px/titleHeight 'Lobster'//'myriad-pro', 'Myriad Pro', 'MyriadPro'
+  font 800 52px/titleHeight 'Lobster'//'myriad-pro', 'Myriad Pro', 'MyriadPro'
 
   .small
-    font-size 64px
+    font-size 44px
     font-family 'Lobster'
     font-weight 100
+
+.content
+  width 1160px
+  margin 20px auto 0
+  overflow hidden
+
+.article
+  position relative
+  width 380px
+  height 380px
+  float left
+  margin-right 5px
+  text-align center
+
+  a
+    text-decoration none
+
+  img
+    position absolute
+    display block
+
+  h2
+    font 800 32px 'myriad-pro', 'Myriad Pro', 'MyriadPro'
+    margin-top 40%
+    position relative
+    color #fff
+
+  h3
+    font 100 18px 'myriad-pro', 'Myriad Pro', 'MyriadPro'
+    margin-top 5px
+    position relative
+    color #fff
+
+.article__layer
+  background-color rgba( 0, 0, 0, .55 )
+
+.layer
+  position absolute
+  width 100%
+  height 100%
+  top 0
+  left 0
