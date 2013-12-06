@@ -7,8 +7,11 @@ end_of_line = lf
 insert_final_newline = true
 draw_white_space = all
 
+[*.json]
+indent_style = tab
+
 [*.{coffee,scss,js}]
 indent_size = 4
 
-[*.{html,jade}]
+[*.{html,jade,styl}]
 indent_size = 2
