@@ -1,18 +1,19 @@
 html,body{width:100%;height:width;background-color:#edf0f4}
 .title{background-color:#152946;width:100%;height:150px}
-h1{color:#fff;text-align:center;font:800 52px/150px 'Lobster';}
+h1{background:radial-gradient(ellipse farthest-side at bottom,#28446b 0,#152946 100%);color:#fff;text-align:center;font:800 52px/150px 'Lobster';width:800px;height:150px;margin:0 auto;}
 h1 .small{font-size:44px;font-family:'Lobster';font-weight:100}
-.content{width:870px;margin:60px auto 0;overflow:hidden}
+.separator{position:relative;top:4px;background:linear-gradient(0,#edf0f4,#dfe2e7);width:100%;height:20px}
+.content{width:800px;margin:60px auto 0;overflow:hidden}
 .presentation{position:relative;color:#717780;text-align:center;width:80%;left:50%;margin-left:-40%;}
 .presentation h4{font-family:'myriad-pro','Myriad Pro','MyriadPro';font-size:18px;font-weight:300}
 .cnt-article{margin-top:60px}
-.article{position:relative;width:280px;float:left;margin-right:15px;text-align:center;}
+.article{position:relative;width:250px;float:left;margin-right:25px;text-align:center;height:300px;}
 .article a{text-decoration:none}
 .article:nth-child(3){margin-right:0}
-.article__top{position:relative;display:block;height:200px;}
-.article__top img{position:absolute;display:block}
-.article__top__content{display:block;width:100%;height:100%;}
-.article__top__content h2{font:700 24px 'Open Sans';position:relative;color:#fff;padding-top:30%}
+.article__top{position:relative;display:block;height:150px;}
+.article__top img{position:absolute;display:block;border-top-left-radius:8px;border-top-right-radius:8px}
+.article__top__content{position:relative;top:30%;display:block;width:100%;height:100%;}
+.article__top__content h2{font:700 24px 'Open Sans';position:relative;color:#fff}
 .article__top__content h3{font:100 16px 'Open Sans';position:relative;color:#fff}
-.article__top__layer{background-color:rgba(0,0,0,0.55)}
+.article__top__layer{background-color:rgba(21,41,70,0.55);border-top-left-radius:8px;border-top-right-radius:8px}
 .layer{position:absolute;width:100%;height:100%;top:0;left:0}

@@ -3,28 +3,40 @@ html, body
   height width
   background-color #edf0f4
 
-titleHeight = 150px
+widthArticle = 250
+marginArticle = 25
+widthTitle = ( widthArticle * 3 + marginArticle * 2 )px
+heightTitle = 150px
 
 .title
   background-color #152946
   width 100%
-  height titleHeight
+  height heightTitle
 
 h1
+  background radial-gradient(ellipse farthest-side at bottom,#28446b 0,#152946 100%)
   color #fff
   text-align center
-  font 800 52px/titleHeight 'Lobster'
+  font 800 52px/heightTitle 'Lobster'
+  width widthTitle
+  height heightTitle
+  margin 0 auto
 
   .small
     font-size 44px
     font-family 'Lobster'
     font-weight 100
 
-widthArticle = 280
-marginArticle = 15
+.separator
+  position relative
+  top 4px
+  background linear-gradient(0deg,#edf0f4, #dfe2e7)
+  width 100%
+  height 20px
+
 
 .content
-  width ( widthArticle * 3 + marginArticle * 2 )px
+  width widthTitle
   margin 60px auto 0
   overflow hidden
 
@@ -50,6 +62,7 @@ marginArticle = 15
   float left
   margin-right marginArticle px
   text-align center
+  height 300px
 
   a
     text-decoration none
@@ -60,13 +73,17 @@ marginArticle = 15
 .article__top
   position relative
   display block
-  height 200px
+  height 150px
 
   img
     position absolute
     display block
+    border-top-left-radius 8px
+    border-top-right-radius 8px
 
 .article__top__content
+  position relative
+  top 30%
   display block
   width 100%
   height 100%
@@ -75,7 +92,6 @@ marginArticle = 15
     font 700 24px 'Open Sans'
     position relative
     color #fff
-    padding-top 30%
 
   h3
     font 100 16px 'Open Sans'//'myriad-pro', 'Myriad Pro', 'MyriadPro'
@@ -83,7 +99,10 @@ marginArticle = 15
     color #fff
 
 .article__top__layer
-  background-color rgba( 0, 0, 0, .55 )
+  // background-color rgba( 0, 0, 0, .55 )
+  background-color rgba( 21, 41, 70, .55 )
+  border-top-left-radius 8px
+  border-top-right-radius 8px
 
 .layer
   position absolute
