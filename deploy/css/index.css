@@ -1,6 +1,6 @@
 html,body{width:100%;height:width;background-color:#edf0f4}
 .title{background-color:#152946;width:100%;height:150px}
-h1{background:radial-gradient(ellipse farthest-side at bottom,#28446b 0,#152946 100%);color:#fff;text-align:center;font:800 52px/150px 'Lobster';width:800px;height:150px;margin:0 auto;}
+h1{background:radial-gradient(ellipse farthest-side at bottom,#28446b 0,#152946 100%);color:#fff;text-align:center;font:800 52px/150px 'Lobster';width:800px;height:150px;margin:0 auto;text-shadow:4px 2px 1px rgba(0,0,0,0.5);}
 h1 .small{font-size:44px;font-family:'Lobster';font-weight:100}
 .separator{position:relative;top:4px;background:linear-gradient(0,#edf0f4,#dfe2e7);width:100%;height:20px}
 .content{width:800px;margin:60px auto 0;overflow:hidden}
@@ -13,7 +13,7 @@ h1 .small{font-size:44px;font-family:'Lobster';font-weight:100}
 .article__top{position:relative;display:block;height:150px;}
 .article__top img{position:absolute;display:block;border-top-left-radius:8px;border-top-right-radius:8px}
 .article__top__content{position:relative;top:30%;display:block;width:100%;height:100%;}
-.article__top__content h2{font:700 24px 'Open Sans';position:relative;color:#fff}
+.article__top__content h2{font:700 24px 'Open Sans';position:relative;color:#fff;text-shadow:4px 2px 1px rgba(0,0,0,0.5)}
 .article__top__content h3{font:100 16px 'Open Sans';position:relative;color:#fff}
 .article__top__layer{background-color:rgba(21,41,70,0.55);border-top-left-radius:8px;border-top-right-radius:8px}
 .layer{position:absolute;width:100%;height:100%;top:0;left:0}
