@@ -4,15 +4,27 @@ block style
   link(rel="stylesheet", href="css/index.css")
 
 block content
-  .title
-    h1 M<span class="small">akio</span>&F<span class="small">loz</span>
+  header
+    .header__bar
 
-  .separator
+    .title
+      .title__background
+      .title__content
+        .title__head We are <h1>M<span class="small">akio</span>&F<span class="small">loz</span></h1>,<br />
+        .title__sub We love Art and Creative Technology.
+
+    .separator
 
   .content
     .presentation
-      h4 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget euismod elit, non porttitor lacus. Mauris molestie ut urna sit amet lacinia. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-    ul.cnt-article
+      h4 Blog posts
+      .line
+      .presentation__content.
+        We talk mainly about technology, creativity and design.<br />
+        Anyway our talks may also be about projects we did or other stuff.<br />
+        Enjoy your read!
+
+    ul.cnt-articles
       - each article in articles
         li.article
           a(href="#")
@@ -22,4 +34,12 @@ block content
               span.article__top__content
                 h2= article.title
                 h3= article.subtitle
+            span.article__bottom
+              span.article__bottom__content= article.description
+              span.bt Read It
+
+  footer
+
+
+
 
