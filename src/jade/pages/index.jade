@@ -16,27 +16,48 @@ block content
     .separator
 
   .content
-    .presentation
-      h4 Blog posts
-      .line
-      .presentation__content.
-        We talk mainly about technology, creativity and design.<br />
-        Anyway our talks may also be about projects we did or other stuff.<br />
-        Enjoy your read!
+    .content__left
+      .presentation
+        h4 Blog posts
+        .line
+        .presentation__content.
+          We are talking about Creativity, Technology and design.<br />
+          However we may, sometimes, diverge a little.<br />
+          Enjoy your read!
 
-    ul.cnt-articles
-      - each article in articles
-        li.article
-          a(href="#")
-            span.article__top
-              img(src="img/articles/#{article.path}/preview.jpg", width="100%", height="100%")
-              span.article__top__layer.layer
-              span.article__top__content
-                h2= article.title
-                h3= article.subtitle
-            span.article__bottom
-              span.article__bottom__content= article.description
-              span.bt Read It
+      ul.cnt-articles
+        - each article in articles
+          li.article
+            a(href="#")
+              span.article__left
+                img(src="img/articles/#{article.path}/preview.jpg", width="100%", height="100%")
+              span.article__right
+                .article__title
+                  h2= article.title
+                  h2.author by <strong>#{article.author}</strong>
+                h3= article.description
+                span.keywords
+                  - each keyword in article.keywords
+                    span.keyword(href="#") ##{keyword}
+
+    .content__right
+      .presentation
+        h4 Things we did
+        .line
+        .presentation__content.
+          Some projects and experiments we did.<br />
+          Make sure to take a look.
+      ul.cnt-links
+        li.link
+          a(href="#") 
+            h4 Christmas Experiments
+            span.link__url www.christmasexperiments.com
+        li.link
+          a(href="#") 
+            h4 Disney
+            span.link__url www.disneyside.disneyparks.disney.go.com
+
+    .clear
 
   footer
 

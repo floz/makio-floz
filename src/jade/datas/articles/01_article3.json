@@ -2,4 +2,6 @@
 	"title": "Bring Christmas 3"
 ,	"subtitle": "Discover lorem ipsum"
 ,	"description": "Learn more about how we created Christmas Experiment."
+,	"keywords": [ "webgl", "threejs" ]
+,	"author": "floz"
 }

@@ -4,6 +4,9 @@ html, body
   background-color #f0f0f0
   color #444
 
+.clear 
+  clear both
+
 widthArticle = 250
 marginArticle = 25
 widthTitle = ( widthArticle * 3 + marginArticle * 2 )px
@@ -59,10 +62,14 @@ h1
   width widthTitle
   margin 45px auto 0
 
+.content__left
+  position  relative
+  float left
+  width 80%
+
 .presentation
   position relative
   color #717780
-  width 80%
 
   h4 
     position relative
@@ -84,71 +91,80 @@ h1
   font 100 16px 'Open Sans'
 
 .cnt-articles
+  width 90%
   margin-top 40px
-  overflow hidden
 
 .article
   position relative
-  width widthArticle px
-  float left
-  margin-right marginArticle px
-  text-align center
-  height 320px
-
+  width 100%
+  height 100px
+  margin-top 30px
   a
+    color #444
     text-decoration none
+    display block
+    position relative
+    width 100%
+    height 100%
 
 .article:nth-child( 3 )
   margin-right: 0
 
-.article__top
-  position relative
-  display block
-  height 150px
-
+.article__left
+  display inline-block
+  width 100px
+  height 100px
+  position absolute
+  left -120px
   img
-    position absolute
-    display block
-    border-top-left-radius 8px
-    border-top-right-radius 8px
+    width 100%
+    height 100%
+    border-radius 50%
 
-.article__top__content
+.article__right
   position relative
-  top 30%
-  display block
+  display inline-block
   width 100%
+  max-width 700px
   height 100%
-
-  h2
-    font 700 24px 'Lobster'
-    position relative
-    color #fff
-    text-shadow 4px 2px 1px rgba(0,0,0,.5)
-
+  top 15px
   h3
     font 100 16px 'Open Sans'//'myriad-pro', 'Myriad Pro', 'MyriadPro'
     position relative
-    color #fff
+    line-height 18px
+    color #717780
+
+.article__title
+  h2
+    font 700 24px 'Lobster'
+    position relative
+    display inline
+  h2.author
+    font-size 12px
+    display inline
+    strong
+      color #004a61
+      font-size 14px
+
+.keywords
+  color #008789
+  font 100 14px 'Open Sans'
 
 .article__top__layer
-  background-color rgba( 68, 68, 68, .55 )
-  border-top-left-radius 8px
-  border-top-right-radius 8px
+  background linear-gradient(45deg, rgba( 68, 68, 68, .75 ), rgba( 68, 68, 68, 0 ) 60%)
 
 .article__bottom 
   position relative
   display block
-  background linear-gradient(0deg,#fff, #edf0f4 70%)
   padding-bottom 10px
-  border-bottom-left-radius 8px
-  border-bottom-right-radius 8px
-  height 160px
+  height 100px
+  left 30px
 
 .article__bottom__content
   position relative
-  font normal 14px 'myriad-pro', 'Myriad Pro', 'MyriadPro'
+  font normal 14px 'Open Sans'
   color #444
-  margin-top 20px
+  margin-top 10px
   width 70%
   height 100px
   display inline-block
@@ -165,12 +181,29 @@ h1
   width 40%
   border-radius 8px
 
-.layer
-  position absolute
-  width 100%
-  height 100%
-  top 0
-  left 0
+.content__right
+  position relative
+  float right
+  width 20%
+  top 188px
+  h4
+    font-size 28px
+  .presentation__content
+    font-size 14px
+
+.cnt-links
+  color #008789
+
+.link
+  margin-top 20px
+  font normal 12px 'Open Sans'
+  a
+    color #444
+    text-decoration none
+    h4
+      font normal 16px 'Lobster'
+  .link__url
+    color #008789
 
 footer
   position relative
