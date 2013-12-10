@@ -65,7 +65,7 @@ h1
 .content__left
   position  relative
   float left
-  width 80%
+  width 100%
 
 .presentation
   position relative
@@ -91,24 +91,37 @@ h1
   font 100 16px 'Open Sans'
 
 .cnt-articles
-  width 90%
+  width 100%
   margin-top 40px
+  overflow hidden
 
 .article
   position relative
-  width 100%
-  height 100px
+  width 32%
+  height 300px
   margin-top 30px
+  margin-right 2%
+  float left
+  border-radius 8px
+  overflow hidden
   a
     color #444
     text-decoration none
     display block
     position relative
     width 100%
-    height 100%
+    height 300px
 
 .article:nth-child( 3 )
   margin-right: 0
+
+.article__img
+  position absolute
+
+.article__content
+  position relative
+  display block
+  color #fff
 
 .article__left
   display inline-block
@@ -134,21 +147,62 @@ h1
     line-height 18px
     color #717780
 
-.article__title
+.article__content
+  text-align center
   h2
-    font 700 24px 'Lobster'
+    font 700 32px 'Lobster'
     position relative
+
+.article__title
+  margin-top 50px
+
+.article__author, .article__title
+  text-shadow 4px 2px 1px rgba(0,40,53,.75)
+
+.article__author
+  font-size 12px !important
+
+.article__author strong
+    color #fc4349
+    font-size 14px
+
+// .article__title
+//   margin-top 60px
+
+.article__layer
+  position absolute
+  display block
+  width 100%
+  height 100%
+  background-color rgba( 0, 74, 97, .25 )
+
+.article__date
+  display block
+  font 100 12px 'Open Sans'
+  padding-top 20px
+  padding-left 20px
+  text-align left
+  color #018f91
+  text-shadow 2px 1px 1px rgba(0,40,53,.75)
+  span
     display inline
-  h2.author
-    font-size 12px
-    display inline
-    strong
-      color #004a61
-      font-size 14px
+
+.article__date__day
+  font-size 20px
+  font-weight 400
+
+.article__date__year
+  font-size 13px
+  margin-left 5px
+  // display block !important
+  // letter-spacing 1.5px
+  position relative
+  line-height 12px
 
 .keywords
   color #008789
-  font 100 14px 'Open Sans'
+  font 600 14px 'Open Sans'
+  text-shadow 4px 2px 1px rgba(0,40,53,.75)
 
 .article__top__layer
   background linear-gradient(45deg, rgba( 68, 68, 68, .75 ), rgba( 68, 68, 68, 0 ) 60%)
@@ -182,6 +236,7 @@ h1
   border-radius 8px
 
 .content__right
+  display none
   position relative
   float right
   width 20%
