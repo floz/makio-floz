@@ -36,21 +36,10 @@ block content
                   span.article__date__day= article.date[ 0 ]
                   span.article__date__month= article.date[ 1 ]
                   span.article__date__year= article.date[ 2 ]
-                h2.article__title!= article.title
-                //- span.keywords
-                //-   - each keyword in article.keywords
-                //-     span.keyword(href="#") ##{keyword}
+                span.article__cnt-title
+                  h2.article__title!= article.title
                 h2.article__author by <strong>#{article.author}</strong>
-              //- span.article__left
-              //-   img(src="img/articles/#{article.path}/preview.jpg", width="100%", height="100%")
-              //- span.article__right
-              //-   .article__title
-              //-     h2= article.title
-              //-     h2.author by <strong>#{article.author}</strong>
-              //-   h3= article.description
-              //-   span.keywords
-              //-     - each keyword in article.keywords
-              //-       span.keyword(href="#") ##{keyword}
+                h3.article__description= article.description
 
     .content__right
       .presentation
