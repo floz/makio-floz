@@ -2,63 +2,32 @@ extends /layouts/default
 
 block style
   link(rel="stylesheet", href="css/index.css")
+  link(rel="stylesheet", href="css/index_articles.css")
 
 block content
-  header
-    .header__bar
-
-    .title
-      .title__background
-      .title__content
-        .title__head We are <h1>M<span class="small">akio</span>&F<span class="small">loz</span></h1>,<br />
-        .title__sub We love Art and Creative Technology.
-
-    .separator
+  header.topbar
+    .topbar__cnt
+      h1 MAKIO & FLOZ
+      span.separator -
+      h2 WE LOVE ART AND TECHNOLOGY
 
   .content
-    .content__left
-      .presentation
-        h4 Blog posts
-        .line
-        .presentation__content.
-          We are talking about Creativity, Technology and design.<br />
-          However we may, sometimes, diverge a little.<br />
-          Enjoy your read!
-
       ul.cnt-articles
-        - each article in articles
-          li.article
-            a(href="#")
-              img.article__img(src="img/articles/#{article.path}/preview.jpg", width="100%", height="100%")
-              span.article__layer
-              span.article__content
-                span.article__date
-                  span.article__date__day= article.date[ 0 ]
-                  span.article__date__month= article.date[ 1 ]
-                  span.article__date__year= article.date[ 2 ]
-                span.article__cnt-title
+        - each article, i in articles
+          - var odd = i % 2
+          li.article(class = odd == 1 ? "article--odd article--#{article.id}" : "article--#{article.id}" )
+            a(href="./articles/#{article.id}")
+              span.article__cnt-title
+                span.article__cnt-title__content
                   h2.article__title!= article.title
-                h2.article__author by <strong>#{article.author}</strong>
-                h3.article__description= article.description
-
-    .content__right
-      .presentation
-        h4 Things we did
-        .line
-        .presentation__content.
-          Some projects and experiments we did.<br />
-          Make sure to take a look.
-      ul.cnt-links
-        li.link
-          a(href="#") 
-            h4 Christmas Experiments
-            span.link__url www.christmasexperiments.com
-        li.link
-          a(href="#") 
-            h4 Disney
-            span.link__url www.disneyside.disneyparks.disney.go.com
-
-    .clear
+                  h2.article__author by <strong>#{article.author}</strong>
+              span.clear
+              span.article__cnt
+                span.article__cnt-img
+                  img.article__img(src="img/articles/#{article.path}/preview.jpg", width="100%", height="100%")
+                span.article__cnt-content
+                  span.article__content
+                    h3.article__description= article.description
 
   footer
 

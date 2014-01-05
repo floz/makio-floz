@@ -1,226 +1,101 @@
-html, body
-  width 100%
-  height width
-  background-color #f0f0f0
-  color #444
-
-.clear 
-  clear both
-
-widthArticle = 250
-marginArticle = 25
-widthTitle = 1000px
-heightTitle = 300px
-
-.header__bar
-  position relative
-  width 100%
-  height 5px
-  background linear-gradient(45deg, #fc4349, #008789,#004a61)
-
-.title
-  background-color #004a61
-  width 100%
-  height heightTitle
-  color #fff
-
-.title__background
-  position absolute
-  left 50%
-  margin-left -(widthTitle/2) px
-  background radial-gradient(ellipse farthest-side at bottom,#008789 0,#004a61 100%)
-  width widthTitle
-  height heightTitle
-
-.title__content
-  position relative
-  width widthTitle
-  height heightTitle
-  top 70px
-  margin 0 auto
-  font 600 42px 'Open Sans'
-  text-shadow 4px 2px 1px rgba(0,40,53,.75)
-
-h1
-  text-align center
-  font 800 64px 'Gudea'
-  display inline
-
-  .small
-    font-size 52px
-    font-family 'Gudea'
-    font-weight 700
-
-.separator
-  position relative
-  top 4px
-  background linear-gradient(0deg,#edf0f4, #dfe2e7)
-  width 100%
-  height 20px
-
-.content
-  width 1000px
-  margin 45px auto 0
-
-.content__left
-  position  relative
-  float left
-  width 80%
-
-.presentation
-  position relative
-  color #717780
-
-  h4 
-    position relative
-    z-index 1
-    font-family 'Gudea'
-    font-size 45px
-    font-weight 700
-    color #444
-
-  .line
-    position relative
-    z-index 0
-    width 100%
-    height 1px
-    background linear-gradient(45deg, #fc4349, #008789, #008789,#004a61, #f0f0f0)
-
-.presentation__content
-  margin-top 20px
-  font 100 16px 'Open Sans'
-
-.cnt-articles
-  width 100%
-  margin-top 30px
-  overflow hidden
+fontSansSerif = 'Gudea'
+fontSerif = 'PT Serif'
 
 .article
   position relative
-  width 32%
-  height 300px
-  margin-top 30px
-  margin-right 2%
-  float left
-  // border-radius 8px
   overflow hidden
-  a
-    color #444
-    text-decoration none
+  width 100%
+  height 500px
+  span
     display block
-    position relative
-    width 100%
-    height 300px
-
-.article:nth-child( 3 )
-  margin-right: 0
-
-.article__img
-  position absolute
-
-.article__content
-  position relative
-  display block
-  color #fff
-
-.article__content
-  text-align center
-  h2
-    font 700 32px 'Gudea'
-    position relative
-
-.article__title
-  margin-top 50px
-  height 100px
-  display table-cell
-  vertical-align bottom
-
-.article__author, .article__title
-  text-shadow 4px 2px 1px rgba(0,40,53,.75)
-
-.article__author
-  font-size 12px !important
-
-.article__author strong
-  color #fc4349
-  font-size 14px
+  a
+    text-decoration none
+  .article__cnt-content
+    display table
+  .article__content
+    display table-cell
 
 .article__cnt-title
-  display table
-  position relative;
-  width 100%
-  height 100px
-
-.article__description
   position relative
-  margin 0 auto
-  font 400 12px 'Open Sans'
-  margin-top 20px;
-  width 80%
+  height 40px
+  overflow hidden
+  float left
+  background-color #1a2129
+  color #fff
+  font-family fontSansSerif
+  padding 20px 0 20px 0
+  width 30%
 
-.article__layer
-  position absolute
-  display block
+.article__cnt-title__content
+  position relative
+  left 20px
+
+.article__title
+  display inline-block
+  font-weight 700
+  font-size 32px
+
+.article__author
+  font-size 14px
+  color #586473
+
+.article__date__day, .article__date__month
+  padding-right 5px
+
+.article__cnt
+  position relative
+  height 435px
+
+.article__cnt-img
+  position relative
+  width 70%
+  height 100%
+  overflow hidden
+  float left
+
+.article__img
+  position relative
   width 100%
   height 100%
-  background-color rgba( 0, 74, 97, .25 )
 
-.article__date
-  display block
-  font 400 12px 'Gudea'
-  font-style italic
-  padding-top 20px
-  text-align center
-  color #018f91
-  text-shadow 2px 1px 1px rgba(0,40,53,.75)
-  span
-    display inline
-
-.article__date__day
-  font-size 20px
-  font-weight 400
-
-.article__date__year
-  font-size 13px
-  margin-left 5px
-  position relative
-  line-height 12px
-
-.keywords
-  color #008789
-  font 600 14px 'Open Sans'
-  text-shadow 4px 2px 1px rgba(0,40,53,.75)
-
-.article__top__layer
-  background linear-gradient(45deg, rgba( 68, 68, 68, .75 ), rgba( 68, 68, 68, 0 ) 60%)
-
-.content__right
+.article__cnt-content
   position relative
   float right
-  width 20%
-  left 50px
-  top 18px
-  h4
-    font-size 28px
-  .presentation__content
-    font-size 14px
+  width 30%
+  height 100%
+  span
+    display inline-block
 
-.cnt-links
-  color #008789
+.article__content
+  vertical-align bottom
+  color #fff
 
-.link
-  margin-top 20px
-  font normal 12px 'Open Sans'
-  a
-    color #444
-    text-decoration none
-    h4
-      font 700 16px 'Gudea'
-  .link__url
-    color #008789
+.article__description
+  padding 20px
+  padding-bottom 40px
+  background-color #586473
+  font normal 14px fontSerif
+  letter-spacing 1px
+
+.article--odd
+  .article__cnt-title
+    float right
+  .article__cnt-title__content
+    text-align right
+    left auto
+    right 20px
+  .article__author
+    text-align right
+  .article__cnt-img
+    float right
+  .article__cnt-content
+    float left
+  .article__content
+    padding-left 0
+    text-align right
 
 footer
-  position relative
-  margin-top 200px
+  display none
   height 300px
-  background-color #444
+  background-color #1a2129
+

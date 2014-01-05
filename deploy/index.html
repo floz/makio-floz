@@ -12,66 +12,34 @@
     <meta property="og:image" content="">
     <title></title>
     <link href="http://fonts.googleapis.com/css?family=Gudea:400,700,400italic|Droid+Serif:400,700,400italic,700italic|Buda:300" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="css/fonts/fonts.css">
+    <link href="http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/index_articles.css">
   </head>
   <body>
-    <header>
-      <div class="header__bar"></div>
-      <div class="title">
-        <div class="title__background"></div>
-        <div class="title__content">
-          <div class="title__head">We are <h1>M<span class="small">akio</span>&F<span class="small">loz</span></h1>,<br /></div>
-          <div class="title__sub">We love Art and Creative Technology.</div>
-        </div>
+    <header class="topbar">
+      <div class="topbar__cnt">
+        <h1>MAKIO & FLOZ</h1><span class="separator">-</span>
+        <h2>WE LOVE ART AND TECHNOLOGY</h2>
       </div>
-      <div class="separator"></div>
     </header>
     <div class="content">
-      <div class="content__left">
-        <div class="presentation">
-          <h4>Blog posts</h4>
-          <div class="line"></div>
-          <div class="presentation__content">
-            We are talking about Creativity, Technology and design.<br />
-            However we may, sometimes, diverge a little.<br />
-            Enjoy your read!
-            
-          </div>
-        </div>
-        <ul class="cnt-articles">
-          <li class="article"><a href="#"><img src="img/articles/03_pack_the_fun/preview.jpg" width="100%" height="100%" class="article__img"><span class="article__layer"></span><span class="article__content"><span class="article__date"><span class="article__date__day">02</span><span class="article__date__month">Dec</span><span class="article__date__year">2013</span></span><span class="article__cnt-title">
-                  <h2 class="article__title">Pack the Fun</h2></span>
-                <h2 class="article__author">by <strong>makio</strong></h2>
-                <h3 class="article__description">Pack the Fun is a WebGL experiment using ThreeJS. Learn more about the development of this project.</h3></span></a></li>
-          <li class="article"><a href="#"><img src="img/articles/02_bring_christmas/preview.jpg" width="100%" height="100%" class="article__img"><span class="article__layer"></span><span class="article__content"><span class="article__date"><span class="article__date__day">3</span><span class="article__date__month">Dec</span><span class="article__date__year">2013</span></span><span class="article__cnt-title">
-                  <h2 class="article__title">Bring Christmas</h2></span>
-                <h2 class="article__author">by <strong>floz</strong></h2>
-                <h3 class="article__description">Learn more about how we created Christmas Experiment.</h3></span></a></li>
-          <li class="article"><a href="#"><img src="img/articles/01_article3/preview.jpg" width="100%" height="100%" class="article__img"><span class="article__layer"></span><span class="article__content"><span class="article__date"><span class="article__date__day">4</span><span class="article__date__month">Dec</span><span class="article__date__year">2013</span></span><span class="article__cnt-title">
-                  <h2 class="article__title">Bring<br />Christmas 3</h2></span>
-                <h2 class="article__author">by <strong>floz</strong></h2>
-                <h3 class="article__description">Learn more about how we created Christmas Experiment.</h3></span></a></li>
-        </ul>
-      </div>
-      <div class="content__right">
-        <div class="presentation">
-          <h4>Things we did</h4>
-          <div class="line"></div>
-          <div class="presentation__content">
-            Some projects and experiments we did.<br />
-            Make sure to take a look.
-          </div>
-        </div>
-        <ul class="cnt-links">
-          <li class="link"><a href="#"> 
-              <h4>Christmas Experiments</h4><span class="link__url">www.christmasexperiments.com</span></a></li>
-          <li class="link"><a href="#"> 
-              <h4>Disney</h4><span class="link__url">www.disneyside.disneyparks.disney.go.com</span></a></li>
-        </ul>
-      </div>
-      <div class="clear"></div>
+      <ul class="cnt-articles">
+        <li class="article article--pack_the_fun"><a href="./articles/pack_the_fun"><span class="article__cnt-title"><span class="article__cnt-title__content">
+                <h2 class="article__title">Pack the Fun</h2>
+                <h2 class="article__author">by <strong>makio</strong></h2></span></span><span class="clear"></span><span class="article__cnt"><span class="article__cnt-img"><img src="img/articles/03_pack_the_fun/preview.jpg" width="100%" height="100%" class="article__img"></span><span class="article__cnt-content"><span class="article__content">
+                  <h3 class="article__description">Pack the Fun is a WebGL experiment using ThreeJS. Learn more about the development of this project.</h3></span></span></span></a></li>
+        <li class="article article--odd article--bring_christmas"><a href="./articles/bring_christmas"><span class="article__cnt-title"><span class="article__cnt-title__content">
+                <h2 class="article__title">Bring Christmas</h2>
+                <h2 class="article__author">by <strong>floz</strong></h2></span></span><span class="clear"></span><span class="article__cnt"><span class="article__cnt-img"><img src="img/articles/02_bring_christmas/preview.jpg" width="100%" height="100%" class="article__img"></span><span class="article__cnt-content"><span class="article__content">
+                  <h3 class="article__description">Learn more about how we created Christmas Experiment.</h3></span></span></span></a></li>
+        <li class="article article--article3"><a href="./articles/article3"><span class="article__cnt-title"><span class="article__cnt-title__content">
+                <h2 class="article__title">Bring Christmas 3</h2>
+                <h2 class="article__author">by <strong>floz</strong></h2></span></span><span class="clear"></span><span class="article__cnt"><span class="article__cnt-img"><img src="img/articles/01_article3/preview.jpg" width="100%" height="100%" class="article__img"></span><span class="article__cnt-content"><span class="article__content">
+                  <h3 class="article__description">Learn more about how we created Christmas Experiment.</h3></span></span></span></a></li>
+      </ul>
     </div>
     <footer></footer>
   </body>

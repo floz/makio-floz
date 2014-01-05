@@ -59,6 +59,7 @@ module.exports = function ( grunt ) {
   function getJadeDatas() {
     jadesData = {};
     jadesData.articles = [];
+    jadesData.articlesById = {};
 
     grunt.file.recurse( srcJadeData, function( abspath, rootdir, subdir, filename ) {
       var name = filename.split( "." )[ 0 ];
@@ -66,7 +67,15 @@ module.exports = function ( grunt ) {
         jadesData[ name ] = require( "./" + abspath );
       } else {
         jadesData.articles.push( require( "./" + abspath ) );
-        jadesData.articles[ jadesData.articles.length - 1 ].path = filename.split( "." ).shift();
+
+        var article = jadesData.articles[ jadesData.articles.length - 1 ]
+        ,   idStart = filename.indexOf( "_" ) + 1
+        ,   idEnd = filename.length - idStart - 5;
+
+        article.id = filename.substr( idStart, idEnd );
+        article.path = filename.split( "." ).shift();
+
+        jadesData.articlesById[ article.id ] = article;
       }
     });
     jadesData.articles.reverse();
@@ -77,10 +86,6 @@ module.exports = function ( grunt ) {
       pkg: grunt.file.readJSON('package.json'),
 
       watch: {
-        // sass: {
-        //   files: [ "src/sass/**/*.scss" ],
-        //   tasks: [ "compass" ]
-        // },
         stylus: {
           files: ["src/stylus/**/*.styl" ],
           tasks: [ "stylus:compile" ]
