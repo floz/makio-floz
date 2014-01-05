@@ -1,43 +1,55 @@
 fontSansSerif = 'Gudea'
 fontSerif = 'PT Serif'
 
+body
+  overflow-x hidden
+
+.content
+  width 100%
+
 .article
   position relative
   overflow hidden
   width 100%
-  height 500px
+  height 435px
+  margin-left -14%
   span
     display block
   a
     text-decoration none
   .article__cnt-content
     display table
+  .article__cnt-title
+    display table-row
+    height 100%
+    background-color #fff
+    width 100%
   .article__content
+    display table-row
+  .article__description__cnt
+    display table
+  .article__description
     display table-cell
-
-.article__cnt-title
-  position relative
-  height 40px
-  overflow hidden
-  float left
-  background-color #1a2129
-  color #fff
-  font-family fontSansSerif
-  padding 20px 0 20px 0
-  width 30%
 
 .article__cnt-title__content
   position relative
-  left 20px
+  display table-cell !important
+  vertical-align middle
+  right 20px
 
-.article__title
+.article__cnt-title
   display inline-block
   font-weight 700
   font-size 32px
+  text-align right
+
+.article__title
+  color #1a2129
+  font 700 36px fontSansSerif
 
 .article__author
-  font-size 14px
   color #586473
+  font 700 14px fontSansSerif
 
 .article__date__day, .article__date__month
   padding-right 5px
@@ -48,7 +60,7 @@ fontSerif = 'PT Serif'
 
 .article__cnt-img
   position relative
-  width 70%
+  width 49%
   height 100%
   overflow hidden
   float left
@@ -60,8 +72,9 @@ fontSerif = 'PT Serif'
 
 .article__cnt-content
   position relative
-  float right
-  width 30%
+  overflow hidden
+  float left
+  width 51%
   height 100%
   span
     display inline-block
@@ -69,6 +82,9 @@ fontSerif = 'PT Serif'
 .article__content
   vertical-align bottom
   color #fff
+  width 50%
+  float right
+  text-align right
 
 .article__description
   padding 20px
@@ -78,21 +94,23 @@ fontSerif = 'PT Serif'
   letter-spacing 1px
 
 .article--odd
+  margin-left 0
+  left 11.5%
   .article__cnt-title
-    float right
-  .article__cnt-title__content
-    text-align right
-    left auto
-    right 20px
+    text-align left
   .article__author
-    text-align right
+    text-align left
   .article__cnt-img
-    float right
+    float left
   .article__cnt-content
     float left
+  .article__cnt-title__content
+    right auto
+    left 20px
   .article__content
     padding-left 0
-    text-align right
+    text-align left
+    float left
 
 footer
   display none

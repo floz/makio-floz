@@ -17,17 +17,30 @@ block content
           - var odd = i % 2
           li.article(class = odd == 1 ? "article--odd article--#{article.id}" : "article--#{article.id}" )
             a(href="./articles/#{article.id}")
-              span.article__cnt-title
-                span.article__cnt-title__content
-                  h2.article__title!= article.title
-                  h2.article__author by <strong>#{article.author}</strong>
               span.clear
               span.article__cnt
-                span.article__cnt-img
-                  img.article__img(src="img/articles/#{article.path}/preview.jpg", width="100%", height="100%")
-                span.article__cnt-content
-                  span.article__content
-                    h3.article__description= article.description
+                if odd == 1
+                  span.article__cnt-img
+                    img.article__img(src="img/articles/#{article.path}/preview.jpg", width="100%", height="100%")
+                  span.article__cnt-content
+                    span.article__cnt-title
+                      span.article__cnt-title__content
+                        h2.article__title!= article.title
+                        h2.article__author by <strong>#{article.author}</strong>
+                    span.article__content
+                      span.article__description__cnt
+                        h3.article__description= article.description
+                else
+                  span.article__cnt-content
+                    span.article__cnt-title
+                      span.article__cnt-title__content
+                        h2.article__title!= article.title
+                        h2.article__author by <strong>#{article.author}</strong>
+                    span.article__content
+                      span.article__description__cnt
+                        h3.article__description= article.description
+                  span.article__cnt-img
+                    img.article__img(src="img/articles/#{article.path}/preview.jpg", width="100%", height="100%")
 
   footer
 

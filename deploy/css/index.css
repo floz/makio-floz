@@ -1,24 +1,30 @@
-.article{position:relative;overflow:hidden;width:100%;height:500px;}
+body{overflow-x:hidden}
+.content{width:100%}
+.article{position:relative;overflow:hidden;width:100%;height:435px;margin-left:-14%;}
 .article span{display:block}
 .article a{text-decoration:none}
 .article .article__cnt-content{display:table}
-.article .article__content{display:table-cell}
-.article__cnt-title{position:relative;height:40px;overflow:hidden;float:left;background-color:#1a2129;color:#fff;font-family:'Gudea';padding:20px 0 20px 0;width:30%}
-.article__cnt-title__content{position:relative;left:20px}
-.article__title{display:inline-block;font-weight:700;font-size:32px}
-.article__author{font-size:14px;color:#586473}
+.article .article__cnt-title{display:table-row;height:100%;background-color:#fff;width:100%}
+.article .article__content{display:table-row}
+.article .article__description__cnt{display:table}
+.article .article__description{display:table-cell}
+.article__cnt-title__content{position:relative;display:table-cell !important;vertical-align:middle;right:20px}
+.article__cnt-title{display:inline-block;font-weight:700;font-size:32px;text-align:right}
+.article__title{color:#1a2129;font:700 36px 'Gudea'}
+.article__author{color:#586473;font:700 14px 'Gudea'}
 .article__date__day,.article__date__month{padding-right:5px}
 .article__cnt{position:relative;height:435px}
-.article__cnt-img{position:relative;width:70%;height:100%;overflow:hidden;float:left}
+.article__cnt-img{position:relative;width:49%;height:100%;overflow:hidden;float:left}
 .article__img{position:relative;width:100%;height:100%}
-.article__cnt-content{position:relative;float:right;width:30%;height:100%;}
+.article__cnt-content{position:relative;overflow:hidden;float:left;width:51%;height:100%;}
 .article__cnt-content span{display:inline-block}
-.article__content{vertical-align:bottom;color:#fff}
+.article__content{vertical-align:bottom;color:#fff;width:50%;float:right;text-align:right}
 .article__description{padding:20px;padding-bottom:40px;background-color:#586473;font:normal 14px 'PT Serif';letter-spacing:1px}
-.article--odd .article__cnt-title{float:right}
-.article--odd .article__cnt-title__content{text-align:right;left:auto;right:20px}
-.article--odd .article__author{text-align:right}
-.article--odd .article__cnt-img{float:right}
+.article--odd{margin-left:0;left:11.5%;}
+.article--odd .article__cnt-title{text-align:left}
+.article--odd .article__author{text-align:left}
+.article--odd .article__cnt-img{float:left}
 .article--odd .article__cnt-content{float:left}
-.article--odd .article__content{padding-left:0;text-align:right}
+.article--odd .article__cnt-title__content{right:auto;left:20px}
+.article--odd .article__content{padding-left:0;text-align:left;float:left}
 footer{display:none;height:300px;background-color:#1a2129}

@@ -1,4 +1,4 @@
-html,body{width:100%;height:width;background-color:#fff;color:#444}
+html,body{width:100%;height:width;background-color:#eee;color:#444}
 .clear{clear:both}
 .topbar{font:700 18px 'Gudea';height:60px;overflow:hidden;background-color:#1a2129;color:#fff;padding-left:35px;text-align:center;}
 .topbar h1,.topbar .separator,.topbar h2{float:left;line-height:60px}
