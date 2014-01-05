@@ -3,7 +3,7 @@
 .article a{text-decoration:none}
 .article .article__cnt-content{display:table}
 .article .article__content{display:table-cell}
-.article__cnt-title{position:relative;height:40px;overflow:hidden;float:left;background-color:#1a2129;color:#fff;font-family:'Gudea';padding:20px 0 20px 0;width:30%}
+.article__cnt-title{position:relative;height:40px;overflow:hidden;background-color:#1a2129;color:#fff;font-family:'Gudea';padding:20px 0 20px 0;width:30%;float:right}
 .article__cnt-title__content{position:relative;left:20px}
 .article__title{display:inline-block;font-weight:700;font-size:32px}
 .article__author{font-size:14px;color:#586473}
@@ -15,7 +15,7 @@
 .article__cnt-content span{display:inline-block}
 .article__content{vertical-align:bottom;color:#fff}
 .article__description{padding:20px;padding-bottom:40px;background-color:#586473;font:normal 14px 'PT Serif';letter-spacing:1px}
-.article--odd .article__cnt-title{float:right}
+.article--odd .article__cnt-title{float:left}
 .article--odd .article__cnt-title__content{text-align:right;left:auto;right:20px}
 .article--odd .article__author{text-align:right}
 .article--odd .article__cnt-img{float:right}
