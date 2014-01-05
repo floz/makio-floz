@@ -1,73 +1,36 @@
-include ../mixins/mixins
+extends /layouts/default
 
-include ../includes/head
+block style
+  link(rel="stylesheet", href="css/index.css")
+  link(rel="stylesheet", href="css/index_articles.css")
 
-mixin article( previewUrl, articleUrl, title, description, date, author )
-    a(href=articleUrl)
-        img(src=previewUrl, width="240", height="100")
-    .content
-        .title= title
-        .description= description
-    .infos
-        .left
-            .date
-                span Date: 
-                span= date
-            .author
-                span Author:
-                span= author
-        .right
-            mixin bt( "READ", articleUrl )  
+block content
+  header.topbar
+    .topbar__cnt
+      h1 MAKIO & FLOZ
+      span.separator -
+      h2 WE LOVE ART AND TECHNOLOGY
 
-include ../includes/weekly_bar
+  .content
+      ul.cnt-articles
+        - each article, i in articles
+          - var odd = i % 2
+          li.article(class = odd == 1 ? "article--odd article--#{article.id}" : "article--#{article.id}" )
+            a(href="./articles/#{article.id}")
+              span.article__cnt-title
+                span.article__cnt-title__content
+                  h2.article__title!= article.title
+                  h2.article__author by <strong>#{article.author}</strong>
+              span.clear
+              span.article__cnt
+                span.article__cnt-img
+                  img.article__img(src="img/articles/#{article.path}/preview.jpg", width="100%", height="100%")
+                span.article__cnt-content
+                  span.article__content
+                    h3.article__description= article.description
 
-#main
-    section#home
-        .top
-            #makioandfloz
-                a#logo(href="/")
-                    h1
-                        img(src="img/global/logo.png", width="255", height="50", alt="Makio&Floz - Creative Developers")
-                mixin bt( "ABOUT", "/about" )
-            #diaporama
-                .shadow
-                - var items = []
-                - items.push( { imgUrl: "img/diaporama/project_01.jpg", articleUrl: "#", title: "PERFS ON IPAD", date: "June 2009", author: "Makio" } )
-                - items.push( { imgUrl: "img/diaporama/project_01.jpg", articleUrl: "#", title: "PERFS ON IPAD 2", date: "Decembre 2009", author: "Floz" } )
-                - items.push( { imgUrl: "img/diaporama/project_01.jpg", articleUrl: "#", title: "PERFS ON IPAD 3", date: "January 2009", author: "Makio" } )
-                - items.push( { imgUrl: "img/diaporama/project_01.jpg", articleUrl: "#", title: "PERFS ON IPAD 4", date: "June 2009", author: "Floz" } )
-                ul#slides
-                    - for item in items
-                        li
-                            a(href=item.articleUrl)
-                                img(src=item.imgUrl, width="500", height="200")
-                            .content
-                                .left
-                                    .title= item.title
-                                .right
-                                    .date
-                                        span Date: 
-                                        span= item.date
-                                    .author
-                                        span Author: 
-                                        span= item.author
-                nav
-                    ul
-                        -for item, i in items
-                            li.activated
-                                a(href=i)
-        .bot
-            ul#articles
-                li
-                    - var article = {}
-                    - article.previewUrl = "img/articles/gamejam-workflow/thumb.jpg"
-                    - article.articleUrl = "/articles/gamejam-workflow"
-                    - article.title = "PREPARE YOUR GAMEJAM"
-                    - article.description = "After fews gamejams you start to understand : made a good game in 2 days start by a good workflow. Here you are :)"
-                    - article.date = "June 2013"
-                    - article.author = "Makio"
-                    mixin article( article.previewUrl, article.articleUrl, article.title, article.description, article.date, article.author )
+  footer
 
-include ../includes/footer
 
-include ../includes/scripts
+
+

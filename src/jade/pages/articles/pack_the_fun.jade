@@ -1,0 +1,56 @@
+extends /layouts/default_article
+
+block style
+  link(rel="stylesheet", href="../css/pack_the_fun.css")
+
+block content
+  header.topbar
+    .topbar__cnt
+      h1 MAKIO & FLOZ
+      span.separator -
+      h2 WE LOVE ART AND TECHNOLOGY
+
+  .content
+      - var article = articlesById[ "pack_the_fun" ]
+      img.head-img(src="../img/articles/#{article.path}/big.jpg")
+      h2.title= article.title
+      .article
+        .article__content.
+          I used to be a movie buff. As a young dad, movies are a luxury I can no longer afford. Luckily my friend, Fayadh, still is and he recently got me to re-watch Christopher Nolan’s “<i>Inception</i>”. In the movie, an inception is the act of planting an idea into someone’s mind such that they believe it is their own. Starting a business is very much like inception, often times you must convince the customer that they chose to purchase your goods because they realized it’s good for them.
+
+        .article__citation.article__citation--big.
+          In a startup, <strong>just like with inception</strong>, you must start with the most basic value your business creates
+
+        .article__content.
+          I used to be a movie buff. <strong>As a young dad, movies are a luxury I can no longer afford.</strong> Luckily my friend, Fayadh, still is and he recently got me to re-watch Christopher Nolan’s “Inception”. In the movie, an inception is the act of planting an idea into someone’s mind such that they believe it is their own. Starting a business is very much like inception, often times you must convince the customer that they chose to purchase your goods because they realized it’s good for them.
+
+        img.article__img.article__img--big(src="../img/articles/#{article.path}/img0.jpg")
+
+        .article__content
+          h4 Audience analysis
+          span I used to be a movie buff. <strong>As a young dad, movies are a luxury I can no longer afford.</strong> Luckily my friend, Fayadh, still is and he recently got me to re-watch Christopher Nolan’s “Inception”. In the movie, an inception is the act of planting an idea into someone’s mind such that they believe it is their own. Starting a business is very much like inception, often times you must convince the customer that they chose to purchase your goods because they realized it’s good for them.
+
+        .article__explanation
+          .article__explanation__legend.
+            The difference between your value proposition and your features. User Onboarding suggests that you should never describe the properties of the your product (i.e the flower) instead describe how awesome your customer will be when they shoot fireballs thanks to your product. 
+          img.article__explanation__img(src="../img/articles/#{article.path}/img1.jpg")
+
+        .article__content Hope it was good!
+
+      .share.
+        SHARE: TODO
+
+      .details-separator
+
+      .details
+        .written-by
+          h4 WRITTEN BY
+          h2.written-by__author MAKIO
+          img(src="../img/author/makio.jpg", width="200", height="60")
+          h5.written-by__desc BOUBOUP! FREELANCER AND KING OF MAKIOPOLIS
+
+  footer
+
+
+
+

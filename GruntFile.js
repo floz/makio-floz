@@ -1,148 +1,178 @@
 module.exports = function ( grunt ) {
 
-    var srcCoffee = "src/coffee/"
-    ,   srcJade = "src/jade/pages"
-    ,   deployJade = "www/"
+  grunt.loadNpmTasks( "grunt-contrib-watch" );
+  grunt.loadNpmTasks( "grunt-contrib-jade" );
+  grunt.loadNpmTasks( "grunt-contrib-imagemin" );
+  grunt.loadNpmTasks( "grunt-contrib-uglify" );
+  grunt.loadNpmTasks( "grunt-contrib-stylus" );
+  grunt.loadNpmTasks( "grunt-browser-sync" );
 
-    ,   coffeesToWatch = null
-    ,   sassToWatch = null
-    ,   jadesToWatch = null;
+  var srcCoffee = "src/coffee/"
+  ,   srcJade = "src/jade/pages"
+  ,   srcStylus = "src/stylus"
+  ,   srcJadeData = "src/jade/datas"
+  ,   deployJade = "deploy/"
+  ,   deployStylus = "deploy/css/"
 
-    grunt.loadNpmTasks( "grunt-contrib-watch" );
-    grunt.loadNpmTasks( "grunt-contrib-jade" );
-    grunt.loadNpmTasks( "grunt-contrib-coffee" );
-    grunt.loadNpmTasks( "grunt-contrib-stylus" );
-    grunt.loadNpmTasks( "grunt-contrib-imagemin" );
-    grunt.loadNpmTasks( "grunt-contrib-uglify" );
+  ,   stylusToWrite = null
+  ,   jadesToWrite = null
+  ,   jadesData = null;
+  
 
-    grunt.registerTask( "default", "watch" );
+  grunt.event.on( "watch", function( action, filepath ) {
+    var fileType = getFileType( filepath );
+    if( fileType == "jade" || fileType == "json" ) {
+      jadesToWrite = getFilesToWrite( jadesToWrite, srcJade, deployJade, ".html" );
+      getJadeDatas();
+      initConfig();
+    }
+    if( fileType == "styl" ) {
+      stylusToWrite = getFilesToWrite( stylusToWrite, srcStylus, deployStylus, ".css" );
+      initConfig();
+    }
+  });
 
-    grunt.event.on( "watch", function( action, filepath ) {
-        var fileType = getFileType( filepath );
-        if( fileType == "coffee" ) {
-            getCoffees();
-            initConfig();
-        } else if ( fileType == "jade" ) {
-            getJades();
-            initConfig();
-        }
+  function getFileType( filepath ) {
+    return filepath.split( "." ).pop();
+  }
+
+  function getFilesToWrite( toWrite, src, dest, ext ) {
+    toWrite = {};
+
+    var deployPath = ""
+    ,   fileNameWithoutType = "";
+
+    grunt.file.recurse( src, function( abspath, rootdir, subdir, filename ) {
+      deployPath = dest;
+      fileNameWithoutType = filename.split( "." ).shift() + ext
+      if( subdir == undefined ) {
+        deployPath += fileNameWithoutType;
+      } else {
+        deployPath += subdir + "/" + fileNameWithoutType;
+      }
+      toWrite[ deployPath ] = abspath;
     });
 
-    function getFileType( filepath ) {
-        return filepath.split( "." ).pop();
-    }
+    return toWrite;
+  }
 
-    function getCoffees() {
-        coffeesToWatch = [ srcCoffee + "*.coffee" ];
+  function getJadeDatas() {
+    jadesData = {};
+    jadesData.articles = [];
+    jadesData.articlesById = {};
 
-        grunt.file.recurse( srcCoffee, function( abspath, rootdir, subdir, filename ) {
-            if( subdir == undefined )
-                return;
-            coffeesToWatch[ coffeesToWatch.length ] = srcCoffee + subdir + "/*.coffee";
-        });
+    grunt.file.recurse( srcJadeData, function( abspath, rootdir, subdir, filename ) {
+      var name = filename.split( "." )[ 0 ];
+      if( subdir == undefined ) {
+        jadesData[ name ] = require( "./" + abspath );
+      } else {
+        jadesData.articles.push( require( "./" + abspath ) );
 
-        coffeesToWatch.reverse();
-    }
+        var article = jadesData.articles[ jadesData.articles.length - 1 ]
+        ,   idStart = filename.indexOf( "_" ) + 1
+        ,   idEnd = filename.length - idStart - 5;
 
-    function getJades() {
-        jadesToWatch = {};
+        article.id = filename.substr( idStart, idEnd );
+        article.path = filename.split( "." ).shift();
 
-        var deployPath = ""
-        ,   fileNameWithoutType = "";
+        jadesData.articlesById[ article.id ] = article;
+      }
+    });
+    jadesData.articles.reverse();
+  }
 
-        grunt.file.recurse( srcJade, function( abspath, rootdir, subdir, filename ) {
-            deployPath = deployJade;
-            fileNameWithoutType = filename.split( "." ).shift() + ".html"
-            if( subdir == undefined ) {
-                deployPath += fileNameWithoutType;
-            } else {
-                deployPath += subdir + "/" + fileNameWithoutType;
-            }
-            jadesToWatch[ deployPath ] = abspath;
-        });
-    }
+  function initConfig() {
+    grunt.config.init( {
+      pkg: grunt.file.readJSON('package.json'),
 
-    function initConfig() {
-        grunt.config.init( {
-            pkg: grunt.file.readJSON('package.json'),
+      watch: {
+        stylus: {
+          files: ["src/stylus/**/*.styl" ],
+          tasks: [ "stylus:compile" ]
+        },
+        jade: {
+          files: [ "src/jade/**/*.jade" ],
+          tasks: [ "jade:compile" ]
+        }
+      },
 
-            watch: {
-                coffee: {
-                    files: [ "src/coffee/**/*.coffee" ],
-                    tasks: [ "coffee:compile" ]
-                },
-                stylus: {
-                    files: [ "src/stylus/**/*.styl" ],
-                    tasks: [ "stylus" ]
-                },
-                jade: {
-                    files: [ "src/jade/**/*.jade" ],
-                    tasks: [ "jade:compile" ]
-                }
-            },
+      jade: {
+        compile: {
+          options: {
+            basedir: "src/jade/",
+            pretty: true,
+            data: jadesData
+          },
+          files: jadesToWrite
+        }
+      },
 
-            jade: {
-                compile: {
-                    options: {
-                        data: {
-                            debug: true
-                        },
-                        pretty: true
-                    },
-                    files: jadesToWatch
-                }
-            },
+      browser_sync: {
+        files: {
+          src: [ 
+            "src/jade/datas/**/*.json",
+            "src/jade/includes/**/*.jade",
+            "src/jade/layouts/*.jade",
+            "deploy/css/**/*.css",
+            "deploy/js/**/*.js",
+            "deploy/img/**/*.jpg",
+            "deploy/img/**/*.png",
+            "deploy/**/*.html"
+          ]
+        },
+        options: {
+          server: {
+            baseDir: "deploy"
+          },
+          watchTask: true
+        }
+      },
 
-            coffee: {
-                compile: {
-                    options: {
-                        bare: true
-                    },
-                    files: {
-                        "www/js/main.js": coffeesToWatch
-                    }
-                }
-            },
+      stylus: {
+        compile: {
+          options: {
+            paths: [ "deploy/img" ],
+            urlfunc: "url"
+          },
+          files: stylusToWrite
+        }
+      },
 
-            stylus: {
-                compile: {
-                    files: {
-                        'www/css/main.css': 'src/stylus/*.styl'
-                    }
-                }
-            },
+      imagemin: {
+        dynamic: {
+          options: {
+            optimizationLevel: 7
+          },
+          files: [ {
+            expand: true,
+            cwd: "deploy/img/",
+            dest: "deploy/img/",
+            src: [ "**/*.{png,jpg}"]
+          }]
+        }
+      },
 
-            imagemin: {
-                dynamic: {
-                    options: {
-                        optimizationLevel: 7
-                    },
-                    files: [ {
-                        expand: true,
-                        cwd: "www/img/",
-                        dest: "www/img/",
-                        src: [ "**/*.{png,jpg}"]
-                    }]
-                }
-            },
+      uglify: {
+        compile: {
+          files: {
+            "deploy/js/main.min.js": "deploy/js/main.js"
+          }
+        }
+      }
+    });
+  }
 
-            uglify: {
-                compile: {
-                    files: {
-                        "deploy/js/main.min.js": "deploy/js/main.js"
-                    }
-                }
-            }
-        });
-    }
+  jadesToWrite = getFilesToWrite( jadesToWrite, srcJade, deployJade, ".html" );
+  stylusToWrite = getFilesToWrite( stylusToWrite, srcStylus, deployStylus, ".css" );
+  getJadeDatas();
+  initConfig();
 
-    getCoffees();
-    getJades();
-    initConfig();
+  grunt.registerTask( "toto", [ "stylus:compile" ] );
 
-    grunt.registerTask( "imageoptim", [ "imagemin:dynamic" ] );
-    grunt.registerTask( "compile", [ "jade:compile", "coffee:compile", "stylus" ] )
-    grunt.registerTask( "all", [ "jade:compile", "coffee:compile", "stylus", "uglify" ] )
+  grunt.registerTask( "imageoptim", [ "imagemin:dynamic" ] );
+  grunt.registerTask( "compile", [ "jade:compile", "stylus:compile" ] );
+  grunt.registerTask( "all", [ "jade:compile", "stylus:compile", "uglify" ] );
+  grunt.registerTask( "default", [ "compile", "browser_sync", "watch" ] );
 
-    //grunt.task.run( "compile" );
+  //grunt.task.run( "compile" );
 }
